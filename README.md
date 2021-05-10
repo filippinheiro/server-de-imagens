@@ -43,3 +43,5 @@ ps: opcional [Yarn](https://yarnpkg.com/)
 
 Com tudo configurado você consegue executar utilizando
 `npm start` ou `yarn start`
+
+As rotas estão documentadas [aqui](docs/rotas.md)
