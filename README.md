@@ -2,13 +2,14 @@
 
 Este é um servidor simples de imagens para o trabalho da disciplina de Banco de Dados
 
-# Como utilizar
+## Como utilizar
 
 ## Primeiros passos
 
 ### SGBD
+
 - Primeiro é necessário ter instalado e configurado o [PostgreSQL](https://www.postgresql.org/)
-   - [Link para download](https://www.postgresql.org/download/)
+  - [Link para download](https://www.postgresql.org/download/)
 
 - Depois deve-se ir para [configuracao do banco](database/index.js) e configurar essas variáveis
 de acordo com a sua conexão do postgres
@@ -36,6 +37,7 @@ ps: opcional [Yarn](https://yarnpkg.com/)
 
 
 ## Configurando o projeto
+
 - Se você escolheu usar npm (default do node)
   - Rode  `npm start` na raíz do projeto
 - Se você escolheu yarn
