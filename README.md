@@ -12,6 +12,7 @@ Este é um servidor simples de imagens para o trabalho da disciplina de Banco de
 
 - Depois deve-se ir para [configuracao do banco](database/index.js) e configurar essas variáveis
 de acordo com a sua conexão do postgres
+
 ```javascript
 const pool = new Pool({
   user: 'postgres',
@@ -21,6 +22,7 @@ const pool = new Pool({
   port: ,
 })
 ```
+
  > O host normalmente é localhost, a porta normalmente é 5432 ou 5433. Mas verifique suas configurações
  > no psql, pgAdmin ou qual client esteja usando
 
