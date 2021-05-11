@@ -46,6 +46,6 @@ ps: opcional [Yarn](https://yarnpkg.com/)
 ## Rodar
 
 Com tudo configurado você consegue executar utilizando
-`npm start` ou `yarn start`
+`npm run start:server` ou `yarn start:server`
 
 As rotas estão documentadas [aqui](docs/rotas.md)
