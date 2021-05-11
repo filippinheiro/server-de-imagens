@@ -13,7 +13,7 @@ app.get('/alunos/:id', async (req, res) => {
   WHERE id_aluno = $1
   `, [id])
 
-  return res.status(200).write(`
+   res.write(`
   <head>
     <title>Aluno</title>
     <style>
@@ -35,7 +35,7 @@ app.get('/alunos/:id', async (req, res) => {
     </table>
   </body>
   `)
-
+  res.end()
 })
 
 app.get('/livros', async (req, res) => {
@@ -45,7 +45,7 @@ app.get('/livros', async (req, res) => {
   FROM Acervo_De_Exemplares
   `)
 
-  return res.write(`
+   res.write(`
   <head>
     <title>Livros</title>
     <style>
@@ -70,6 +70,7 @@ app.get('/livros', async (req, res) => {
     </table>
   </body>
   `)
+  res.end()
 })
 
 
@@ -80,7 +81,7 @@ app.get('/alunos', async (req, res) => {
   FROM Aluno
   `)
 
-  return res.status(200).write(`
+   res.write(`
   <head>
     <title>Alunos</title>
     <style>
@@ -105,6 +106,7 @@ app.get('/alunos', async (req, res) => {
     </table>
   </body>
   `)
+  res.end()
 })
 
 
@@ -117,7 +119,7 @@ app.get('/livros/:id', async (req, res) => {
   WHERE registro_sistema = $1
   `, [id])
 
-  return res.write(`
+   res.write(`
   <head>
     <title>Livro</title>
     <style>
@@ -139,6 +141,7 @@ app.get('/livros/:id', async (req, res) => {
     </table>
   </body>
   `)
+  res.end()
 
 })
 
@@ -158,7 +161,7 @@ app.get('/emprestimos', async(req,res) => {
 
   const {rows} = await db.query(queryString)
 
-   return res.write(`
+    res.write(`
    <head>
     <title>Todos os Empresiimos</title>
     <style>
@@ -191,6 +194,7 @@ app.get('/emprestimos', async(req,res) => {
    </body>
    `
    )
+   res.end()
 })
 
 
@@ -214,7 +218,7 @@ app.get('/emprestimos/:id', async(req,res) => {
   const {rows} = await db.query(queryString, [id])
 
   if(rows[0]) {
-    return res.write(`
+     res.write(`
     <head>
     <title>Aluno</title>
     <style>
@@ -246,10 +250,12 @@ app.get('/emprestimos/:id', async(req,res) => {
     </table>
    </body>
     `)
+    res.end()
   } else {
-    return res.write(
+     res.write(
       `<h1>Aluno sem emprestimos</h1>`
     )
+    res.end()
   }
 })
 
