@@ -24,7 +24,7 @@ const pool = new Pool({
 })
 ```
 
- > O host normalmente é localhost, a porta normalmente é 5432 ou 5433. Mas verifique suas configurações
+ > database é o nome do banco, o host normalmente é localhost, a porta normalmente é 5432 ou 5433. Mas verifique suas configurações
  > no psql, pgAdmin ou qual client esteja usando
 
 ### Servidor
@@ -39,7 +39,7 @@ ps: opcional [Yarn](https://yarnpkg.com/)
 ## Configurando o projeto
 
 - Se você escolheu usar npm (default do node)
-  - Rode  `npm start` na raíz do projeto
+  - Rode  `npm install` na raíz do projeto
 - Se você escolheu yarn
   - Rode `yarn` na raíz do projeto
 
